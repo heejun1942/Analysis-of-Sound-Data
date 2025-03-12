@@ -110,10 +110,10 @@
 
 
 
-#### 📢 멜 스펙토그램(mel spectrogram) vs MFCC
+#### 📢 멜 스펙토그램(mel spectrogram) vs MFCC(Mel Frequency Cepstral Coefficients)
 
 
-|비교 항목 | 멜 스펙토그램 (Mel Spectrogram) | MFCC (Mel Frequency Cepstral Coefficients)|
+|비교 항목 | 멜 스펙토그램 (Mel Spectrogram) | MFCC |
 |------------|---------------------|-------------------------|
 |출력 형태 | 이미지 형태 (시간-주파수 변화를 시각적으로 표현) |	수치 형태 (특징을 나타내는 계수)|  
 |목적 | 시간-주파수 변화 시각화 (주로 분석과 시각화)  |	음성 특징을 추출하여 인식, 분류에 사용|
