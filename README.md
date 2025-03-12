@@ -67,9 +67,8 @@
 - 시간에 따른 주파수 변화   
 - 여러 개의 스펙트럼을 시간 축을 따라 쌓아서 만든 그림
 
-<br>
 
-📢 스펙트럼(Spectrum) vs. 스펙토그램(Spectogram)  
+#### 📢 스펙트럼(Spectrum) vs. 스펙토그램(Spectogram)  
 - 둘 다 주파수(소리의 높낮이)와 관련된 그래프지만, 시간을 포함하는지 여부가 핵심 차이!
 
 
@@ -111,7 +110,7 @@
 
 
 
-🎯 멜 스펙토그램(mel spectrogram) vs MFCC
+#### 📢 멜 스펙토그램(mel spectrogram) vs MFCC
 
 
 |비교 항목 | 멜 스펙토그램 (Mel Spectrogram) | MFCC (Mel Frequency Cepstral Coefficients)|
