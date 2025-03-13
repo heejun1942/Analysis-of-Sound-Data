@@ -56,7 +56,13 @@
 ### 푸리에 변환 (Fourier Transform)
 - 푸리에 변환(Fourier Transform)은 복잡한 파동을 여러 개의 단순한 파동(주파수 성분)으로 나누는 방법
 
-![푸리에 변환](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png)
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FboqscG%2FbtqCUxBxL6A%2Fkp3sBQqU6cjwdnzeNWKXmK%2Fimg.png)
+
+- 푸리에 변환을 하면 시간 영역(Time domain)이 사라짐
+
+![푸리에 변환](https://blog.kakaocdn.net/dn/b3FgvC/btqCZyFlFp8/Do5RduBzXBZAcYxf8iRab0/img.gif)
+
+- 전체 waveform에 한 번에 변환을 취할 수도 있겠지만, 자른(split)한 프레임(frame) 마다 적용하는 Short Time Fourier Transfrom(STFT) 방법이 있음
 
 ## 3. 특징 추출 기법: 스펙트럼/ 멜 스펙토그램/ MFCC
 
@@ -66,6 +72,8 @@
 - 파동의 시간 영역(Time domain)을 주파수 영역(Frequency domain)으로 변환
 - 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
 - x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
+
+![푸리에 변환](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png)
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png)
 
@@ -120,6 +128,8 @@
     - 푸리에 변환 (FFT): 각 프레임에 푸리에 변환을 적용하여 스펙트럼(주파수 정보를 가짐)을 얻음
     - 멜 스케일(Mel scale) 적용  
     - Cepstral 분석: Log(로그 변환) + IFFT(Inverse FFT, 역 고속 푸리에 변환)
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchQNK5%2FbtqCZZ3CW8s%2Fx5zR5q2bow8rUjx2cfDV5K%2Fimg.png)
 
 #### (1) Cepstral 분석
 
