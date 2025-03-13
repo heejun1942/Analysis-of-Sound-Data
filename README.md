@@ -1,8 +1,10 @@
-# 음성 데이터 분석
+# 음성 데이터 분석 (Analysis of Sound Data)
+1. 음성데이터
+2. 음성데이터 특징 추출(Feature extraction)
+3. 특징 추출 기법
+
 
 ## 1. 음성 데이터란?
-
-
 
 ### 1) 소리(Audio)의 이해
 - 어떤 물체가 진동하면서 발생
@@ -64,7 +66,7 @@
 
 - 전체 waveform에 한 번에 변환을 취할 수도 있겠지만, 자른(split)한 프레임(frame) 마다 적용하는 Short Time Fourier Transfrom(STFT) 방법이 있음
 
-## 3. 특징 추출 기법: 스펙트럼/ 멜 스펙토그램/ MFCC
+## 3. 특징 추출 기법: 스펙트럼,멜 스펙토그램, MFCC
 
 ### 1) 스펙트럼(Spectrum)
 
