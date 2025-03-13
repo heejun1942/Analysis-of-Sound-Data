@@ -128,6 +128,8 @@
 
 
 ### 3) MFCC(Mel Frequency Cepstral Coefficients)
+> MFCC는 음성 신호의 주파수 특성을 멜 스케일과 DCT를 적용해 저차원 벡터로 변환한 특징 값으로, 음성 인식에서 널리 사용된다. 이는 인간의 청각 특성을 반영하고 주파수 간 상관성을 제거하여 머신러닝 모델 입력에 적합하다.
+
 -  Mel Spectrum(멜 스펙트럼)에서 Cepstral(켑스트럴) 분석을 통해 추출된 값
 
 - MFCC 추출과정
