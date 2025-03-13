@@ -9,9 +9,10 @@
 - 목소리의 경우 공기 분자가 진동을 하면서 발생 
 - 즉 매질인 공기 분자가 얼마나 크게 흔들렸는지에 따라 형성되는 이러한 공기압의 진폭이, waveform 형태를 띄게 되어 우리가 흔히 보는 그래프가 그려짐
 
+![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png)
+
 #### (1) 진폭(Amplitude)
 - 소리의 크기와 관련
-
 
 
 #### (2) 주파수(frequency)
@@ -21,7 +22,10 @@
 - *[참고] 사람의 가청주파수 대역은 20Hz~20KHz*
 
 
-#### (3) 위상(Phase)
+#### (3) 음색(Tone Color, Timbre)
+
+
+#### (4) 위상(Phase)
 파동이 현재 어떤 상태(위치)에 있는지를 나타내는 개념
 
 - 예시: 그네 타기  
@@ -130,3 +134,4 @@
 - https://sswwd.tistory.com/2
 - https://www.youtube.com/watch?v=Z_6tAxb89sw
 - https://brightwon.tistory.com/11
+- https://hyunlee103.tistory.com/54
