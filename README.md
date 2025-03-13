@@ -69,7 +69,7 @@
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png)
 
-### 2) 멜 스펙토그램(Mel Spectrogram)
+### 2) 멜 스펙트로로그램(Mel Spectrogram)
 
 #### (1) 멜-스케일(mel-scale)  
 
@@ -82,12 +82,14 @@
     - 일반 주파수 스펙트럼 → 100Hz, 200Hz, 300Hz, ... 이런 식으로 일정한 간격
     - 멜스펙트럼 → 100Hz, 150Hz, 250Hz, 400Hz, ... 낮은 주파수는 촘촘, 높은 주파수는 넓게
 
-#### (2) 스펙토그램(Spectogram)  
+#### (2) 스펙트로그램(Spectrogram)  
 - 시간에 따른 주파수 변화   
 - 여러 개의 스펙트럼을 시간 축을 따라 쌓아서 만든 그림
 
+![스펙트로그램](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FErVIg%2FbtqCX9sstFA%2FyCH9xZiePiYwqSoPmFA78K%2Fimg.png)
 
-#### 📢 스펙트럼(Spectrum) vs. 스펙토그램(Spectogram)  
+
+#### 📢 스펙트럼(Spectrum) vs. 스펙트로그램(Spectrogram)  
 - 둘 다 주파수(소리의 높낮이)와 관련된 그래프지만, 시간을 포함하는지 여부가 핵심 차이!
 
 
@@ -99,7 +101,7 @@
 | 추가 정보  | 시간 정보 없음       | 색깔로 진폭(에너지) 표현 |
 
 
-#### (3) 멜 스펙토그램 (mel spectogram) 이란?  
+#### (3) 멜 스펙트로그램 (mel spectrogram) 이란?  
 - 멜 스펙토그램은 시간에 따른 멜 스펙트럼의 변화를 시각적으로 표현한 것
 
 - 일반적인 스펙토그램은 푸리에 변환(FFT)으로 만든 주파수 스펙트럼의 시간 변화를 보여줘.
@@ -129,10 +131,10 @@
 
 
 
-#### 📢 멜 스펙토그램(mel spectrogram) vs MFCC(Mel Frequency Cepstral Coefficients)
+#### 📢 멜 스펙트로그램(mel spectrogram) vs MFCC(Mel Frequency Cepstral Coefficients)
 
 
-| 비교 항목 | 멜 스펙토그램 (Mel Spectrogram) | MFCC |
+| 비교 항목 | Mel Spectrogram | MFCC |
 |------------|---------------------|---------------------|
 | 출력 형태 | 이미지 형태 (시간-주파수 변화를 시각적으로 표현) | 수치 형태 (특징을 나타내는 계수) |  
 | 목적 | 시간-주파수 변화 시각화 (주로 분석과 시각화) | 음성 특징을 추출하여 인식, 분류에 사용 |
