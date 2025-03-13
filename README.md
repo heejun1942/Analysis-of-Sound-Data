@@ -9,7 +9,7 @@
 - 목소리의 경우 공기 분자가 진동을 하면서 발생 
 - 즉 매질인 공기 분자가 얼마나 크게 흔들렸는지에 따라 형성되는 이러한 공기압의 진폭이, waveform 형태를 띄게 되어 우리가 흔히 보는 그래프가 그려짐
 
-![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png){: width="70%" height="70%"}
+![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png)
 
 - 소리의 3요소: 세기, 높낮이, 음색
 
@@ -48,23 +48,28 @@
 - *[참고] 일반적으로 표준 샘플링 레이트는 44.1KHz*
 
 
+### 3) windowing
+
+
 ## 2. 음성데이터 특징 추출(Feature extraction)
 
 ### 푸리에 변환 (Fourier Transform)
 - 푸리에 변환(Fourier Transform)은 복잡한 파동을 여러 개의 단순한 파동(주파수 성분)으로 나누는 방법
 
-
+![푸리에 변환](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png)
 
 ## 3. 특징 추출 기법: 스펙트럼/ 멜 스펙토그램/ MFCC
 
-### 1) 스펙트럼
+### 1) 스펙트럼(Spectrum)
 
 - 푸리에 변환을 실시한 결과를 그래프로 나타낸 것
 - 파동의 시간 영역(Time domain)을 주파수 영역(Frequency domain)으로 변환
 - 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
 - x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
 
-### 2) 멜 스펙토그램
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png)
+
+### 2) 멜 스펙토그램(Mel Spectrogram)
 
 #### (1) 멜-스케일(mel-scale)  
 
