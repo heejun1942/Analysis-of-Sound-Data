@@ -70,10 +70,11 @@
 
 - 푸리에 변환을 실시한 결과를 그래프로 나타낸 것
 - 파동의 시간 영역(Time domain)을 주파수 영역(Frequency domain)으로 변환
-- 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
-- x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
 
 ![푸리에 변환](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png)
+
+- 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
+- x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png)
 
@@ -84,11 +85,17 @@
 - 왜 필요할까?
     - 사람의 귀는 낮은 주파수는 민감하게, 높은 주파수는 둔감하게 들음
     - 일반적인 주파수 스펙트럼(푸리에 변환 결과)에서는 고주파 영역이 너무 세밀해서 사람이 듣는 감각과 맞지 않음
-    - 따라서 멜(Mel) 스케일을 사용해 사람이 듣는 방식에 가깝게 변형한 게 멜스펙트럼이야!
+    - 따라서 멜(Mel) 스케일을 사용해 사람이 듣는 방식에 가깝게 변형한 게 멜스펙트럼!
 
 - 예시
     - 일반 주파수 스펙트럼 → 100Hz, 200Hz, 300Hz, ... 이런 식으로 일정한 간격
     - 멜스펙트럼 → 100Hz, 150Hz, 250Hz, 400Hz, ... 낮은 주파수는 촘촘, 높은 주파수는 넓게
+
+- Mel Filter Bank
+    - 1000Hz까지는 Linear하게 변환하다가 그 이후로는 Mel scale triangular filter를 만들어 곱해줌
+    - 보통 26개 혹은 40개 정도의 filter bank를 사용
+    - 각 Filter Bank 영역대 마다 Energy값(spectrum power값 평균)을 모두 합하고 log를 취해줌
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPy60k%2FbtqCUx9lJ88%2FYWGYhrOK1ZFxeOuaWgCxu1%2Fimg.png)
 
 #### (2) 스펙트로그램(Spectrogram)  
 - 시간에 따른 주파수 변화   
@@ -139,10 +146,17 @@
     - Spectrum에서 배음 구조를 유추해낼 수 있다면 소리의 고유한 특징을 찾아낼 수 있는 것
     - 이것을 가능하게 하는 것이 Ceptral 분석!
 
+#### (2) DCT(Discrete Cosine Transform)
+- DCT는 특정 함수를 cosine 함수의 합으로 표현하는 변환
+- 이때 앞쪽(low) cosine 함수의 계수가 변환 전 데이터의 대부분의 정보를 가지고 있고 뒤쪽으로 갈수록 0에 근사해 데이터 압축의 효과를 보인다. 즉 낮은 주파수 쪽으로 에너지 집중현상이 일어난다.
+- MFCC는 이 계수(cepstrum coefficient) 중 주파수가 낮은, 정보와 에너지가 몰려있는 12개의 계수(cepstrum coefficient)를 선택해 이를 feature로 사용한다. 그리고 이 12개 계수에 해당하는 각 frame의 Energy를 13번째 feature로 사용한다. cepstrim coefficient는 다음과 같이 구해진다.
+- 즉,  Mel-spectrogram에 DCT를 취하고 낮은(정보가 많은) 계수(cepstrum coefficient) 12개와, 이들로 구해진 energy를 더해 한 frame 당 총 13개의 값이 feature 역할을 하게 되고 이를 MFCC(mel frequency cepstrum coefficient)라고 한다. 
+
+
 
 
 #### 📢 멜 스펙트로그램(mel spectrogram) vs MFCC(Mel Frequency Cepstral Coefficients)
-
+> Mel-Spectrogram은 주파수끼리 상관성(Correlation)이 형성되어 있는데, 이러한 상관관계를 De-Correlate해줌
 
 | 비교 항목 | Mel Spectrogram | MFCC |
 |------------|---------------------|---------------------|
