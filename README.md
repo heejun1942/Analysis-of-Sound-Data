@@ -9,7 +9,9 @@
 - 목소리의 경우 공기 분자가 진동을 하면서 발생 
 - 즉 매질인 공기 분자가 얼마나 크게 흔들렸는지에 따라 형성되는 이러한 공기압의 진폭이, waveform 형태를 띄게 되어 우리가 흔히 보는 그래프가 그려짐
 
-![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png)
+![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png){: width="70%" height="70%"}
+
+- 소리의 3요소: 세기, 높낮이, 음색
 
 #### (1) 진폭(Amplitude)
 - 소리의 크기와 관련
@@ -23,6 +25,10 @@
 
 
 #### (3) 음색(Tone Color, Timbre)
+- 기음과 배음의 구성이 음색을 결정짓는 중요한 요소
+    - 기음/기본 주파수 : 소리의 높낮이를 구분할 수 있는 기본이 되는 주파수
+    - 배음 / 고조 주파수 : 기음의 정수배가 되는 주파수
+
 
 
 #### (4) 위상(Phase)
