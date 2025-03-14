@@ -10,11 +10,12 @@
 - 어떤 물체가 진동하면서 발생
 - 목소리의 경우 공기 분자가 진동을 하면서 발생 
 - 즉 매질인 공기 분자가 얼마나 크게 흔들렸는지에 따라 형성되는 이러한 공기압의 진폭이, waveform 형태를 띄게 되어 우리가 흔히 보는 그래프가 그려짐
+    - Waveform: x축은 시간, y축은 진폭폭
 
-![Waveform(x축은 시간, y축은 진폭폭)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png"  width="70%" height="70%"/>
 
-- 소리의 3요소: 세기, 높낮이, 음색
 
+### 2) 소리의 3요소: 세기, 높낮이, 음색
 #### (1) 진폭(Amplitude)
 - 소리의 크기와 관련
 
@@ -30,7 +31,6 @@
 - 기음과 배음의 구성이 음색을 결정짓는 중요한 요소
     - 기음/기본 주파수 : 소리의 높낮이를 구분할 수 있는 기본이 되는 주파수
     - 배음 / 고조 주파수 : 기음의 정수배가 되는 주파수
-
 
 
 #### (4) 위상(Phase)
@@ -62,7 +62,8 @@
 
 - 푸리에 변환을 하면 시간 영역(Time domain)이 사라짐
 
-![푸리에 변환](https://blog.kakaocdn.net/dn/b3FgvC/btqCZyFlFp8/Do5RduBzXBZAcYxf8iRab0/img.gif)
+<img src="https://blog.kakaocdn.net/dn/b3FgvC/btqCZyFlFp8/Do5RduBzXBZAcYxf8iRab0/img.gif"  width="70%" height="70%"/>
+
 
 - 전체 waveform에 한 번에 변환을 취할 수도 있겠지만, 자른(split)한 프레임(frame) 마다 적용하는 Short Time Fourier Transfrom(STFT) 방법이 있음
 
@@ -73,7 +74,7 @@
 - 푸리에 변환을 실시한 결과를 그래프로 나타낸 것
 - 파동의 시간 영역(Time domain)을 주파수 영역(Frequency domain)으로 변환
 
-![푸리에 변환](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png"  width="70%" height="70%"/>
 
 - 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
 - x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
@@ -103,7 +104,7 @@
 - 시간에 따른 주파수 변화   
 - 여러 개의 스펙트럼을 시간 축을 따라 쌓아서 만든 그림
 
-![스펙트로그램](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FErVIg%2FbtqCX9sstFA%2FyCH9xZiePiYwqSoPmFA78K%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FErVIg%2FbtqCX9sstFA%2FyCH9xZiePiYwqSoPmFA78K%2Fimg.png"  width="70%" height="70%"/>
 
 
 #### 📢 스펙트럼(Spectrum) vs. 스펙트로그램(Spectrogram)  
