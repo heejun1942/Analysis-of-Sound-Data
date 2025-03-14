@@ -84,7 +84,7 @@
 
 - 푸리에 변환을 하면 시간 영역(Time domain)이 사라짐
 
-<img src="https://blog.kakaocdn.net/dn/b3FgvC/btqCZyFlFp8/Do5RduBzXBZAcYxf8iRab0/img.gif"  width="70%" height="70%"/>
+<img src="https://blog.kakaocdn.net/dn/b3FgvC/btqCZyFlFp8/Do5RduBzXBZAcYxf8iRab0/img.gif"  width="60%" height="60%"/>
 
 
 - 전체 waveform에 한 번에 변환을 취할 수도 있겠지만, 자른(split)한 프레임(frame) 마다 적용하는 Short Time Fourier Transfrom(STFT) 방법이 있음
@@ -96,7 +96,7 @@
 - 푸리에 변환을 실시한 결과를 그래프로 나타낸 것
 - 파동의 시간 영역(Time domain)을 주파수 영역(Frequency domain)으로 변환
 
-<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png"  width="70%" height="70%"/>
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmRjaQ%2Fbtq1NttQzq4%2FmwC4GjFdH4pn6gGFVlxLpk%2Fimg.png"  width="60%" height="60%"/>
 
 - 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
 - x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
