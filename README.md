@@ -64,7 +64,7 @@
 - 각 프레임을 독립적으로 분석할 수 있도록 함
 - Overlapping을 적용함. 보통 25ms 프레임을 10ms 간격으로 겹치게(50%~75% overlap) 사용
   
-<img src="https://www.researchgate.net/profile/Alessandro-Koerich/publication/333914934/figure/fig1/AS:799375194329088@1567597306001/Framing-the-input-audio-signal-into-several-frames-s-s-1-with-appropriate.png">
+<img src="https://www.researchgate.net/profile/O-Abimbola/publication/355222638/figure/fig2/AS:1079472145076225@1634377623201/One-of-the-most-common-methods-of-audio-preprocessing-splitting-the-whole-signal-into.ppm">
 
 #### (2) Windowing
 
