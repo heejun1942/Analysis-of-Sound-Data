@@ -15,7 +15,7 @@
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrhmQX%2FbtqC7rOEtmz%2FAKY5xZ3FcQDimiewJLYKD0%2Fimg.png"  width="70%" height="70%"/>
 
 
-### 2) 소리의 3요소: 세기, 높낮이, 음색
+### 3) 소리의 3요소: 세기, 높낮이, 음색
 #### (1) 진폭(Amplitude)
 - 소리의 크기와 관련
 
@@ -43,14 +43,36 @@
     - 중간: 위상이 90도 (절반 지남)
     - 맨 뒤: 위상이 180도 (반대편 도착)
 
-### 2) 샘플링(Sampling) & 샘플 레이트(Sample rate)
+### 4) 샘플링(Sampling) & 샘플 레이트(Sample rate)
 - 컴퓨터가 이해할 수 있도록 소리(아날로그 신호)를 숫자(디지털)로 변환하는 과정
 - 이때 신호를 측정하는 간격을 샘플 레이트(Sample rate)라고 함
 
 - *[참고] 일반적으로 표준 샘플링 레이트는 44.1KHz*
 
 
-### 3) windowing
+### 5) Framing + Windowing
+> Framing (프레이밍) = 신호를 작은 조각(프레임)으로 나누는 과정  
+> Windowing (윈도잉) = 각 프레임에 창 함수(Window Function)를 곱하는 과정
+
+#### (1) Framing
+- 오디오는 연속적(sequential)이며 시간에 따라 변화하는(time dependent) 신호이다. 
+- 따라서, 시간에 따라 일정하다는(stationary) 가정을 적용할 수 있도록 신호를 아주 짧은 구간으로 나눈다. 
+    - 음성 신호는 시간이 지나면서 계속 변하는데, 이렇게 변하는 신호를 바로 분석하기는 어려워. 그래서 "아주 짧은 구간(예: 25ms)" 단위로 신호를 잘라서 분석하면, 그 짧은 순간 동안은 신호가 거의 변하지 않는다고 가정할 수 있어.
+    - 이게 바로 "stationary(정상성) 가정"인데, 짧은 구간에서는 신호가 일정하다고 생각하고 분석할 수 있다는 의미야. 만약 신호를 길게 보면 너무 많은 변화가 생겨서 패턴을 잡기 어려워지거든.
+    - 즉, "시간에 따라 변하는 신호를 짧게 나눠서, 그 짧은 구간에서는 일정하다고(안 변한다고) 가정하는 것"이 핵심이야!
+- 잘린 구간 내에서는 신호가 시간에 영향을 받지 않는(stationary) 상태로 간주될 수 있다. 음성 인식에서는 각 구간이 하나의 음소(phone)를 포함하도록 설정하며, 일반적으로 한 구간의 길이는 약 25ms 정도로 설정한다.
+- 각 프레임을 독립적으로 분석할 수 있도록 함
+- Overlapping을 적용함. 보통 25ms 프레임을 10ms 간격으로 겹치게(50%~75% overlap) 사용
+  
+<img src="https://www.researchgate.net/profile/Alessandro-Koerich/publication/333914934/figure/fig1/AS:799375194329088@1567597306001/Framing-the-input-audio-signal-into-several-frames-s-s-1-with-appropriate.png">
+
+#### (2) Windowing
+
+- 신호를 짧은 구간으로 나눌 때, 각 구간의 경계(양 끝값)가 불연속적으로 끊어지는 문제가 발생할 수 있다. 이렇게 되면 원래 신호와 달라지는 왜곡이 생긴다. 
+- 이를 해결하기 위해, 각 구간(frame)의 양 끝을 부드럽게 0으로 수렴시키는 창 함수(window function)를 곱해준다. 아래 그림의 정규분포 모양 곡선이 바로 창 함수이다.
+- 대표적인 창 함수: Hamming, Hanning, Blackman 등
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcYKw9S%2FbtqC9x77dPe%2FtNxoIerPSSpuBu1ftWjzHk%2Fimg.png" width=80% height=80%>
 
 
 ## 2. 음성데이터 특징 추출(Feature extraction)
@@ -79,7 +101,7 @@
 - 음향 신호를 주파수, 진폭으로 분석하여 보여준다(시간에 대한 정보가 없다)
 - x축은 주파수(Frequency), y축은 진폭(Amplitude)을 나타낸다
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYh97%2Fbtq1MqD7BEU%2FwK4UkF5ZcLvTkupjdFjKkk%2Fimg.png" width=90% height=90%>
 
 ### 2) 멜 스펙트로로그램(Mel Spectrogram)
 
@@ -131,7 +153,7 @@
 
 
 ### 3) MFCC(Mel Frequency Cepstral Coefficients)
-> MFCC는 음성 신호의 주파수 특성을 멜 스케일과 DCT를 적용해 저차원 벡터로 변환한 특징 값으로, 음성 인식에서 널리 사용된다. 이는 인간의 청각 특성을 반영하고 주파수 간 상관성을 제거하여 머신러닝 모델 입력에 적합하다.
+> MFCC는 음성 신호의 주파수 특성을 멜 스케일과 DCT(Discrete Cosine Transform)를 적용해 저차원 벡터로 변환한 특징 값으로, 음성 인식에서 널리 사용된다. 이는 인간의 청각 특성을 반영하고 주파수 간 상관성을 제거하여 머신러닝 모델 입력에 적합하다.
 
 -  Mel Spectrum(멜 스펙트럼)에서 Cepstral(켑스트럴) 분석을 통해 추출된 값
 
@@ -151,7 +173,7 @@
     - Spectrum에서 배음 구조를 유추해낼 수 있다면 소리의 고유한 특징을 찾아낼 수 있는 것
     - 이것을 가능하게 하는 것이 Ceptral 분석!
 
-#### (2) DCT(Discrete Cosine Transform)
+#### (2) DCT(Discrete Cosine Transform, 이산 코사인 변환)
 - DCT는 특정 함수를 cosine 함수의 합으로 표현하는 변환
 - 이때 앞쪽(low) cosine 함수의 계수가 변환 전 데이터의 대부분의 정보를 가지고 있고 뒤쪽으로 갈수록 0에 근사해 데이터 압축의 효과를 보인다. 즉 낮은 주파수 쪽으로 에너지 집중현상이 일어난다.
 - MFCC는 이 계수(cepstrum coefficient) 중 주파수가 낮은, 정보와 에너지가 몰려있는 12개의 계수(cepstrum coefficient)를 선택해 이를 feature로 사용한다. 그리고 이 12개 계수에 해당하는 각 frame의 Energy를 13번째 feature로 사용한다. cepstrim coefficient는 다음과 같이 구해진다.
